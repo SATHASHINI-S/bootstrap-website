@@ -3,17 +3,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    background: #f4f6fb;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe4ec 0%, #fff0f6 100%);
     color: #222;
+    transition: background 0.5s;
+    min-height: 100vh;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #222;
+    letter-spacing: 0.5px;
 }
 
 .navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 24px rgba(255,182,193,0.12);
+    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%) !important;
+    border-bottom: 2px solid #ff69b4;
 }
 
 .navbar-brand img {
@@ -21,56 +27,123 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-primary {
-    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%) !important;
 }
 
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 .hero-section {
     padding: 80px 0 60px 0;
-    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+    background: linear-gradient(270deg, #ffb6c1, #ff69b4, #ffb6c1, #fff0f6);
+    background-size: 600% 600%;
+    animation: gradientBG 12s ease infinite;
     color: #fff;
+    position: relative;
+    overflow: hidden;
 }
-
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.08);
+    pointer-events: none;
+}
 .hero-section h1 {
     font-size: 3rem;
     font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
-
 .hero-section h2 {
     font-size: 2rem;
     font-weight: 400;
 }
-
+@keyframes glow {
+    0% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
+    50% { box-shadow: 0 0 24px #00c6ff, 0 0 32px #007bff; }
+    100% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
+}
 .hero-section .btn {
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
+    color: #fff;
+    border: none;
+    animation: glow 2s infinite alternate;
+}
+.hero-section .btn:hover {
+    background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 100%);
+    color: #fff;
+    animation: glow 1s infinite alternate;
 }
 
 .card {
-    border: none;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-    transition: transform 0.2s;
+    border-radius: 1.2rem;
+    background: rgba(255,240,246,0.7);
+    box-shadow: 0 8px 32px rgba(255,182,193,0.12);
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+    border: 1.5px solid #ffb6c1;
+    backdrop-filter: blur(6px);
+    position: relative;
+    overflow: hidden;
 }
 .card:hover {
-    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 16px 48px rgba(255,182,193,0.22);
+    transform: translateY(-4px) scale(1.04);
+    border: 2px solid #ff69b4;
+    background: rgba(255,240,246,0.85);
 }
-
+.card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.5px;
+    color: #ff69b4;
+    text-shadow: 0 2px 8px rgba(255,182,193,0.12);
+}
+.card-body p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.6;
+}
+section.container {
+    background: linear-gradient(120deg, rgba(255,182,193,0.12) 0%, rgba(255,240,246,0.7) 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(255,182,193,0.14);
+    padding: 2.5rem 2rem;
+    margin-top: 2rem;
+    border: 1.5px solid #ffb6c133;
+}
 .card-title {
     color: #007bff;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 footer {
-    background: #222;
+    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
     color: #fff;
     font-size: 1rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    box-shadow: 0 -4px 24px rgba(255,182,193,0.12);
+    border-top: 2px solid #ff69b4;
+}
+/* Technology page image styling */
+.img-fluid.rounded.shadow {
+    box-shadow: 0 8px 32px rgba(255,182,193,0.14);
+    border-radius: 1.2rem;
+    border: 2px solid #ffb6c133;
+    background: rgba(255,240,246,0.7);
 }
 footer a {
     color: #fff;
     text-decoration: underline;
     margin: 0 8px;
+    transition: color 0.2s;
 }
 footer a:hover {
     color: #00c6ff;
