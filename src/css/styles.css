@@ -1,0 +1,77 @@
+h1, h2, h3, h4, h5, h6 {
+    /* Add any styles for headings here if needed */
+}
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+}
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}
+
+.bg-primary {
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+}
+
+.hero-section {
+    padding: 80px 0 60px 0;
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.hero-section .btn {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.card-title {
+    color: #007bff;
+    font-weight: 600;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 0 8px;
+}
+footer a:hover {
+    color: #00c6ff;
+}
