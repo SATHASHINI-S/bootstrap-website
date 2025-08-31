@@ -32,12 +32,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-primary text-white text-center py-5 hero-section" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);">
-        <div class="container">
+    <section class="bg-primary text-white text-center py-5 hero-section position-relative" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%); overflow: hidden;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.15); z-index:0;"></div>
+        <div class="container position-relative" style="z-index:1;">
             <h1 class="display-4 fw-bold mb-3">Innovating Your Business</h1>
             <h2 class="h3 fw-light mb-4">Guarding Your Success</h2>
             <p class="lead mb-4">Artificial Intelligence &bull; Micro Services &bull; DevOps &bull; Cloud Native Apps &bull; Site Reliability Engineering &bull; Bootstrap</p>
-            <a href="#contact" class="btn btn-light btn-lg">Contact Us</a>
+            <a href="#contact" class="btn btn-light btn-lg animate__animated animate__pulse animate__infinite">Contact Us</a>
         </div>
     </section>
 
@@ -48,6 +49,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm border border-primary">
                         <div class="card-body">
+                            <div class="mb-3"><span class="fs-1 text-primary">&#9881;</span></div>
                             <h3 class="card-title text-primary fw-bold">Technology</h3>
                             <p class="card-text">Cutting-edge solutions for modern businesses.</p>
                         </div>
@@ -56,6 +58,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm border border-primary">
                         <div class="card-body">
+                            <div class="mb-3"><span class="fs-1 text-primary">&#128187;</span></div>
                             <h3 class="card-title text-primary fw-bold">Services</h3>
                             <p class="card-text">Expertise in AI, DevOps, Microservices, and more.</p>
                         </div>
@@ -64,6 +67,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm border border-primary">
                         <div class="card-body">
+                            <div class="mb-3"><span class="fs-1 text-primary">&#128200;</span></div>
                             <h3 class="card-title text-primary fw-bold">Industries</h3>
                             <p class="card-text">Serving a wide range of industries with tailored solutions.</p>
                         </div>
@@ -104,17 +108,21 @@
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <div class="container">
-            <div class="mb-3">
-                <a href="https://twitter.com/yourhandle" class="text-white me-3"> Twitter</a>
-                <a href="https://linkedin.com/company/yourcompany" class="text-white me-3"> LinkedIn</a>
-                <a href="https://github.com/yourrepo" class="text-white"> GitHub</a>
+            <div class="row">
+                <div class="col-md-6 text-md-start mb-2 mb-md-0">
+                    <span class="me-3">&copy; 2025 1upCloud Tech</span>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://twitter.com/yourhandle" class="text-white me-3"></a>
+                    <a href="https://linkedin.com/company/yourcompany" class="text-white me-3"></a>
+                    <a href="https://github.com/yourrepo" class="text-white"></a>
+                </div>
             </div>
-            <div class="mb-2">
+            <div class="mt-2">
                 <a href="privacy-policy" class="text-white me-3">Privacy</a>
                 <a href="about" class="text-white me-3">About Us</a>
                 <a href="docs/5.3/getting-started/webpack/" class="text-white">Contact Us</a>
             </div>
-            <div>&copy; 2025 1upCloud Tech</div>
         </div>
     </footer>
     </footer>
