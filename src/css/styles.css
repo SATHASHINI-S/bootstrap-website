@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffe4ec 0%, #fff0f6 100%);
+    background: linear-gradient(135deg, #f4f6fb 0%, #e9ecef 100%);
     color: #222;
     transition: background 0.5s;
     min-height: 100vh;
@@ -17,9 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    box-shadow: 0 4px 24px rgba(255,182,193,0.12);
-    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%) !important;
-    border-bottom: 2px solid #ff69b4;
+    box-shadow: 0 4px 24px rgba(0,123,255,0.08);
+    background: linear-gradient(90deg, #222 0%, #007bff 100%) !important;
+    border-bottom: 2px solid #007bff;
 }
 
 .navbar-brand img {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-primary {
-    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%) !important;
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
 }
 
 @keyframes gradientBG {
@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-section {
     padding: 80px 0 60px 0;
-    background: linear-gradient(270deg, #ffb6c1, #ff69b4, #ffb6c1, #fff0f6);
+    background: linear-gradient(270deg, #007bff, #00c6ff, #6a11cb, #2575fc);
     background-size: 600% 600%;
     animation: gradientBG 12s ease infinite;
     color: #fff;
@@ -70,39 +70,39 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 2rem;
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
+    background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
     color: #fff;
     border: none;
     animation: glow 2s infinite alternate;
 }
 .hero-section .btn:hover {
-    background: linear-gradient(90deg, #ff69b4 0%, #ffb6c1 100%);
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
     color: #fff;
     animation: glow 1s infinite alternate;
 }
 
 .card {
     border-radius: 1.2rem;
-    background: rgba(255,240,246,0.7);
-    box-shadow: 0 8px 32px rgba(255,182,193,0.12);
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 8px 32px rgba(0,123,255,0.08);
     transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
-    border: 1.5px solid #ffb6c1;
+    border: 1.5px solid rgba(13,110,253,0.12);
     backdrop-filter: blur(6px);
     position: relative;
     overflow: hidden;
 }
 .card:hover {
-    box-shadow: 0 16px 48px rgba(255,182,193,0.22);
+    box-shadow: 0 16px 48px rgba(13,110,253,0.18);
     transform: translateY(-4px) scale(1.04);
-    border: 2px solid #ff69b4;
-    background: rgba(255,240,246,0.85);
+    border: 2px solid #0d6efd;
+    background: rgba(255,255,255,0.85);
 }
 .card-body h3 {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
     letter-spacing: 0.5px;
-    color: #ff69b4;
-    text-shadow: 0 2px 8px rgba(255,182,193,0.12);
+    color: #007bff;
+    text-shadow: 0 2px 8px rgba(13,110,253,0.08);
 }
 .card-body p {
     font-size: 1.05rem;
@@ -110,12 +110,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 section.container {
-    background: linear-gradient(120deg, rgba(255,182,193,0.12) 0%, rgba(255,240,246,0.7) 100%);
+    background: linear-gradient(120deg, rgba(13,110,253,0.08) 0%, rgba(255,255,255,0.7) 100%);
     border-radius: 1.5rem;
-    box-shadow: 0 8px 32px rgba(255,182,193,0.14);
+    box-shadow: 0 8px 32px rgba(13,110,253,0.10);
     padding: 2.5rem 2rem;
     margin-top: 2rem;
-    border: 1.5px solid #ffb6c133;
+    border: 1.5px solid #0d6efd22;
 }
 .card-title {
     color: #007bff;
@@ -124,27 +124,32 @@ section.container {
 }
 
 footer {
-    background: linear-gradient(90deg, #ffb6c1 0%, #ff69b4 100%);
+    background: linear-gradient(90deg, #0d6efd 0%, #1a237e 100%);
     color: #fff;
     font-size: 1rem;
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
-    box-shadow: 0 -4px 24px rgba(255,182,193,0.12);
-    border-top: 2px solid #ff69b4;
+    box-shadow: 0 -4px 24px rgba(13,110,253,0.08);
+    border-top: 2px solid #0d6efd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-/* Technology page image styling */
-.img-fluid.rounded.shadow {
-    box-shadow: 0 8px 32px rgba(255,182,193,0.14);
-    border-radius: 1.2rem;
-    border: 2px solid #ffb6c133;
-    background: rgba(255,240,246,0.7);
+
+.footer-links, .footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
 }
+
 footer a {
     color: #fff;
-    text-decoration: underline;
-    margin: 0 8px;
+    text-decoration: none;
     transition: color 0.2s;
 }
 footer a:hover {
-    color: #00c6ff;
+    color: #90caf9;
 }
