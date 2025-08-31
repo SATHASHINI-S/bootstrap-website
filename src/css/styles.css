@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f6fb 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, #ffe4ec 0%, #fff0f6 100%);
     color: #222;
     transition: background 0.5s;
     min-height: 100vh;
