@@ -1,29 +1,45 @@
-h1, h2, h3, h4, h5, h6 {
-    /* Add any styles for headings here if needed */
-}
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
+html, body {
+    height: 100%;
+    width: 100%;
+}
 body {
-    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffe4ec 0%, #fff0f6 100%);
+    font-family: 'Roboto', 'Open Sans', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f6fb 0%, #e9ecef 100%);
     color: #222;
     transition: background 0.5s;
     min-height: 100vh;
+    min-width: 100vw;
     position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #222;
     letter-spacing: 0.5px;
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
 }
 
 .navbar {
     box-shadow: 0 4px 24px rgba(0,123,255,0.08);
     background: linear-gradient(90deg, #222 0%, #007bff 100%) !important;
     border-bottom: 2px solid #007bff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
-.navbar-brand img {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+.navbar-nav .nav-link {
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-size: 1.08rem;
+    padding: 0.5rem 1.2rem;
+    color: #fff !important;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 0.5rem;
+}
+.navbar-nav .nav-link:hover {
+    background: rgba(13,110,253,0.08);
+    color: #90caf9 !important;
 }
 
 .bg-primary {
@@ -35,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
+
 .hero-section {
     padding: 80px 0 60px 0;
     background: linear-gradient(270deg, #007bff, #00c6ff, #6a11cb, #2575fc);
@@ -43,27 +60,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     position: relative;
     overflow: hidden;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(13,110,253,0.10);
 }
-.hero-section::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.08);
-    pointer-events: none;
-}
-.hero-section h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.12);
-}
-.hero-section h2 {
-    font-size: 2rem;
-    font-weight: 400;
-}
-@keyframes glow {
-    0% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
-    50% { box-shadow: 0 0 24px #00c6ff, 0 0 32px #007bff; }
-    100% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
+.hero-section h1, .hero-section h2 {
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
 }
 .hero-section .btn {
     font-size: 1.2rem;
@@ -74,11 +75,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     border: none;
     animation: glow 2s infinite alternate;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 .hero-section .btn:hover {
     background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
     color: #fff;
     animation: glow 1s infinite alternate;
+    box-shadow: 0 4px 16px rgba(13,110,253,0.18);
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
+    50% { box-shadow: 0 0 24px #00c6ff, 0 0 32px #007bff; }
+    100% { box-shadow: 0 0 8px #00c6ff, 0 0 16px #007bff; }
 }
 
 .card {
@@ -90,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(6px);
     position: relative;
     overflow: hidden;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
 }
 .card:hover {
     box-shadow: 0 16px 48px rgba(13,110,253,0.18);
@@ -103,11 +116,13 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
     color: #007bff;
     text-shadow: 0 2px 8px rgba(13,110,253,0.08);
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
 }
 .card-body p {
     font-size: 1.05rem;
     color: #333;
     line-height: 1.6;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
 }
 section.container {
     background: linear-gradient(120deg, rgba(13,110,253,0.08) 0%, rgba(255,255,255,0.7) 100%);
@@ -135,8 +150,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
 }
-
 .footer-links, .footer-info {
     display: flex;
     flex-wrap: wrap;
@@ -144,12 +159,15 @@ footer {
     justify-content: center;
     margin-bottom: 0.5rem;
 }
-
 footer a {
     color: #fff;
     text-decoration: none;
     transition: color 0.2s;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
 }
 footer a:hover {
     color: #90caf9;
+}
+#root, .container-fluid, .container {
+    background: transparent !important;
 }
